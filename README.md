@@ -11,17 +11,17 @@
 3. [Note on NTFS File Systems](#3-note-on-ntfs-file-systems)
 4. [Double check your Nvidia drivers](#4-double-check-your-nvidia-drivers)
 5. [**Gaming on Steam**](#5-gaming-on-steam)
-    1. [Installing Steam](#1-installing-steam)
-    2. [What is Proton?](#2-what-is-proton)
-    3. [Enabling Proton](#3-enabling-proton)
-    4. [Installing Proton-GE (Optional)](#4-installing-proton-ge-optional)
+    1. [Installing Steam](#i-installing-steam)
+    2. [What is Proton?](#ii-what-is-proton)
+    3. [Enabling Proton](#iii-enabling-proton)
+    4. [Installing Proton-GE (Optional)](#iv-installing-proton-ge-optional)
 6. [**Gaming outside of Steam**](#6-gaming-outside-of-steam)
-    1. [Introducing Heroic Games Launcher](#1-introducing-heroic-games-launcher)
-    2. [Installing Wine-GE](#2-installing-wine-ge)
-    3. [Introducing Wine Prefixes](#3-introducing-wine-prefixes)
-    4. [Running Epic/GOG/Amazon games on Heroic Launcher](#4-running-epic-gog-amazon-games-on-heroic-launcher)
-    5. [Running other games on Heroic Launcher](#5-running-other-games-on-heroic-launcher)
-    6. [Giving Heroic Launcher file permissions (Optional)](#6-giving-heroic-launcher-file-permissions-optional)
+    1. [Introducing Heroic Games Launcher](#i-introducing-heroic-games-launcher)
+    2. [Installing Wine-GE](#ii-installing-wine-ge)
+    3. [Introducing Wine Prefixes](#iii-introducing-wine-prefixes)
+    4. [Running Epic/GOG/Amazon games on Heroic Launcher](#iv-running-epic-gog-amazon-games-on-heroic-launcher)
+    5. [Running other games on Heroic Launcher](#v-running-other-games-on-heroic-launcher)
+    6. [Giving Heroic Launcher file permissions (Optional)](#vi-giving-heroic-launcher-file-permissions-optional)
 7. [Closing thoughts](#7-closing-thoughts)
 
 X. [Appendix](#appendix)
@@ -74,7 +74,7 @@ Open the `Nvidia X Server Settings` application or write `nvidia-smi` in the ter
 
 # 5. Gaming on Steam
 
-### 1. Installing Steam
+### I. Installing Steam
 
 With all of that nonsense out of the way, time to install Steam using your distro's package manager. Open your terminal and follow along:
 
@@ -90,13 +90,13 @@ And you're done! Steam should show up within your apps, simply start it and log 
 
 ⚠️ **Note:** I don't recommend installing the Flatpak version of Steam. It has some issues specific to Flatpak, and makes your Steam files difficult to reach which can be annoying. Use your package manager instead.
 
-### 2. What is Proton?
+### II. What is Proton?
 
 Before we get to installing games, we first need to understand what's even going on. The short of it is that there exists an amazing program called **WINE** that allows running Windows programs on Mac & Linux. Wine is awesome and is still in constant development, but it sadly isn't that great at running video games.
 
 Valve (creators of Steam) wanted Windows games to run on Linux anyways, so they took Wine and created a version of it specifically for video games, called **Proton**! This is what Steam uses to run Windows games on Linux, and it works beautifully.
 
-### 3. Enabling Proton
+### III. Enabling Proton
 
 In order to enable Proton on Steam, click on Steam in the top left --> settings. Then, go to Compatibility and turn on `Enable Steam Play for supported titles` and `Enable Steam Play for all other titles`. 
 
@@ -108,9 +108,9 @@ Steam will prompt you to restart the app. Go ahead and do so. When you open back
 
 Again, be sure to check out [ProtonDB](tab:https://www.protondb.com/) to see which games run well, and which might not work.
 
-The final thing you need to know about running games on Steam is that every time you play a game for the first time, Steam creates ~250mb of files inside of `Steam/steamapps/compatdata/[Game ID]`. This is called a **prefix** folder. I'll talk more about this [in section 6.3](#3-introducing-wine-prefixes), and while you usually don't need to mess with them, it's worth noting so you don't get surprised that installing many small games can use a lot of space.
+The final thing you need to know about running games on Steam is that every time you play a game for the first time, Steam creates ~250mb of files inside of `Steam/steamapps/compatdata/[Game ID]`. This is called a **prefix** folder. I'll talk more about this [in section 6.3](#iii-introducing-wine-prefixes), and while you usually don't need to mess with them, it's worth noting so you don't get surprised that installing many small games can use a lot of space.
 
-### 4. Installing Proton GE (Optional)
+### IV. Installing Proton GE (Optional)
 
 Another thing you need to know is the existence of Proton-GE, an improved version of Proton that is patched with various fixes and improvements. Often if a game has issues with regular proton or you need to squeeze a little bit more FPS, it's preferable to use Proton-GE. There are usually zero downsides to using it, so let's use it. 
 
@@ -138,7 +138,7 @@ Which program you use for running games outside Steam is pretty opinionated. For
 
 Other popular programs that do roughly the same thing are [Lutris](tab:https://lutris.net/) and [Bottles](tab:https://usebottles.com/). Honestly, I like both of them too, but they're a bit beyond the scope of this guide.
 
-### 1. Introducing Heroic Games Launcher
+### I. Introducing Heroic Games Launcher
 
 Heroic Games Launcher was originally an open source launcher for the Epic Games store, then the GOG store. Over time, they added more and more features to support running all sorts of games, similar to Lutris and Bottles.
 
@@ -148,7 +148,7 @@ Flatpaks may take a while to install, but when you're done simply open the launc
 
 ![A screenshot of Heroic Games Launcher.](tab:https://i.vgy.me/RmK9Ky.png)
 
-### 2. Installing Wine-GE
+### II. Installing Wine-GE
 
 Proton is created *specifically* for gaming on Steam. Attempting to use it outside of Steam can cause issues, so the community instead uses Wine-GE. Wine-GE is *very* similar to Proton, and you can expect similar performance and compatibility, except it's easier to run outside of Steam.
 
@@ -160,7 +160,7 @@ You may notice alternate versions like `Wine-GE-LOL`; these are for specific gam
 
 <sub>Wine-GE is maintained by Glorious Eggroll by the way, the same person who maintains Proton-GE.</sub>
 
-### 3. Introducing Wine Prefixes
+### III. Introducing Wine Prefixes
 
 Wine prefixes are an important concept you have to be familiar with in Linux gaming. A wine prefix is essentially a large folder that mimics a Windows system, with its own `C:\` drive, program files, registry files, etc.
 
@@ -170,7 +170,7 @@ The only real downside to this is that each Wine prefix uses roughly ~250mb of s
 
 <sub>Note: Wine Prefixes are also where your save files are stored. If you need to backup or import a save file, look there!</sub>
 
-<h3 id="4-running-epic-gog-amazon-games-on-heroic-launcher"> 4. Running Epic/GOG/Amazon games on Heroic Launcher </h3>
+<h3 id="iv-running-epic-gog-amazon-games-on-heroic-launcher"> IV. Running Epic/GOG/Amazon games on Heroic Launcher </h3>
 
 <sub>Note: It's recommended to check [ProtonDB](tab:https://www.protondb.com/) and see if your game runs well on Linux before installing.</sub>
 
@@ -192,7 +192,7 @@ That's it. Your game should install without issue. If you're using a gaming lapt
 <img width=75% src="https://i.vgy.me/bzdlWy.jpg" alt="A screenshot showing Enter the Gungeon" />
 </div>
 
-### 5. Running other games on Heroic Launcher
+### V. Running other games on Heroic Launcher
 
 <sub>Note: It's recommended to check [ProtonDB](tab:https://www.protondb.com/) and see if your game runs well on Linux before installing.</sub>
 
@@ -238,7 +238,7 @@ If for whatever reason your game *doesn't* work, right click the game and click 
 <img width=75% src="https://i.vgy.me/hL6ZSh.jpg" alt="A screenshot showing Risk of Rain" />
 </div>
 
-#### 6. Giving Heroic Launcher file permissions (Optional)
+#### VI. Giving Heroic Launcher file permissions (Optional)
 
 I've talked a lot about how Heroic doesn't have permissions to access most of your files, meaning you usually have to move your games and Wine Prefixes to its folder at `/home/Games/Heroic/` in order for them to work, but there **is** actually a way you can fix this.
 
