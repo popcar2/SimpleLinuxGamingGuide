@@ -48,7 +48,7 @@ A few years ago I would say gaming on Linux isn't worth it. I used ZorinOS for a
 
 If you need to see which games run well on Linux and which don't, check out [ProtonDB.](tab:https://www.protondb.com/)
 
-# 3. ⚠️ Note on NTFS File Systems ⚠️
+<h1 id="3-note-on-ntfs-file-systems"> 3. ⚠️ Note on NTFS File Systems ⚠️ </h1>
 
 It's common that people new to Linux would be dual-booting Windows or generally have their games on a partition created by Windows. The file system Windows uses, called NTFS, sadly causes a lot of issues in Linux gaming. Trying to run games on an NTFS partition will usually cause issues, if they even work at all.
 
@@ -118,7 +118,9 @@ To install Proton-GE, I recommend a handy program called **ProtonUp-Qt** that wi
 
 Once downloaded, open it up and it should automatically detect Steam. Click on "install version", choose the most recent Proton-GE version, then click install.
 
-![Image showing the Proton-GE installation process via ProtonUp-Qt](https://i.vgy.me/13NBVI.png)
+<div align="center">
+    <img src="https://i.vgy.me/13NBVI.png" alt="Image showing the Proton-GE installation process via ProtonUp-Qt" />
+</div>
 
 And you're done! Restart Steam if you have it open, then go to `Steam --> Settings --> Compatibility` and you should be able to choose Proton-GE as your default. Your games should work slightly better now.
 
@@ -168,7 +170,7 @@ The only real downside to this is that each Wine prefix uses roughly ~250mb of s
 
 <sub>Note: Wine Prefixes are also where your save files are stored. If you need to backup or import a save file, look there!</sub>
 
-### 4. Running Epic/GOG/Amazon games on Heroic Launcher
+<h3 id="4-running-epic-gog-amazon-games-on-heroic-launcher"> 4. Running Epic/GOG/Amazon games on Heroic Launcher </h3>
 
 <sub>Note: It's recommended to check [ProtonDB](tab:https://www.protondb.com/) and see if your game runs well on Linux before installing.</sub>
 
@@ -299,7 +301,3 @@ Note: these 3 programs are interchangeable, and mostly boil down to preference.
 * **Lutris**: A program that allows you to run non-Steam games easily. It's more feature-packed than Heroic, but more complex to use. 
 
 * **Bottles**: A program that allows you to run and manage Wine apps easily. Can also be used for gaming.
-
----
-
-<sub> Written by popcar2. Thanks for reading.
