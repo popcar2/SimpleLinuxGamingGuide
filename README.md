@@ -26,7 +26,7 @@
 
 X. [Appendix](#appendix)
 
----
+
 
 # 1. Introduction
 
@@ -127,8 +127,6 @@ And you're done! Restart Steam if you have it open, then go to `Steam --> Settin
 <div align="center">
 <img src="https://i.vgy.me/lFSF8m.png" alt="Image showing Proton-GE selected as the default on Steam" />
 </div>
-
----
 
 # 6. Gaming outside of Steam
 
