@@ -146,7 +146,7 @@ Unlike Steam, I *do* recommend downloading the Flatpak version of Heroic Launche
 
 Flatpaks may take a while to install, but when you're done simply open the launcher and you should be greeted with this screen:
 
-![A screenshot of Heroic Games Launcher.](tab:https://i.vgy.me/RmK9Ky.png)
+![A screenshot of Heroic Games Launcher.](https://i.vgy.me/RmK9Ky.png)
 
 ### II. Installing Wine-GE
 
